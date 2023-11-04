@@ -1,9 +1,11 @@
 // 19. Remove Nth Node From End of List
-// Given the head of a linked list, remove the nth node from the end of the list and return its head.
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 // Difficulty: Medium
 
-// Description of Solution:
+// Description of Problem:
+// Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+// Description of My Solution:
 // 1. Loop through all nodes in Linked List to find last node and the node preceding the node to be deleted.
 // 2. If the node to be deleted is the head, precedingNode will remain undefined.
 //    In this case simply return the 2nd node.
