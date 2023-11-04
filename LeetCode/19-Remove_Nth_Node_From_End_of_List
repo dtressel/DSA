@@ -3,6 +3,13 @@
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 // Difficulty: Medium
 
+// Description of Solution:
+// 1. Loop through all nodes in Linked List to find last node and the node preceding the node to be deleted.
+// 2. If the node to be deleted is the head, precedingNode will remain undefined.
+//    In this case simply return the 2nd node.
+// 3. Remove the correct node, simply by resetting the preceding node's next value.
+// 4. Return head.
+
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
