@@ -35,13 +35,13 @@ var threeSum = function(nums) {
   nums.sort((a, b) => a - b);
   const solutions = [];
   let leftValue;
-  // Test each value in array, skipping duplicates
+  // Test each value in array, skipping duplicates, this will be left pointer
   for (let i = 0; i < nums.length - 2; i++) {
       if (leftValue === nums[i]) {
           continue;
       }
       leftValue = nums[i];
-      // Create two pointers to try to find two more numbers that add up to test value
+      // Create two more pointers (middle and right)
       let middle = i + 1;
       let right = nums.length - 1;
       let lastMiddleValue;
