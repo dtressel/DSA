@@ -13,6 +13,8 @@
 // 4. If all letters match, return starting index of matched subset of haystack
 // 5. If a letter doesn't match return to index after first matching letter and continue.
 
+// Time Complexity: O(mn) for theoretical worst case scenario.
+
 
 // Solution:
 /**
