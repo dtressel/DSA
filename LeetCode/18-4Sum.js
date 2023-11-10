@@ -10,7 +10,6 @@
 // You may return the answer in any order.
 
 // Time Complexity: O(n^3)
-// Space Compleity: O(n)
 
 /**
  * @param {number[]} nums
