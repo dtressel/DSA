@@ -13,7 +13,7 @@
 // 3. Basically, it uses a 3 pointer technique
 // 4. Some optimization may still be possible
 
-// Solution #3 Time Complexity: 0(n**2)
+// Solution #3 Time Complexity: 0(n^2)
 
 // Description of Solution #1:
 // 1. While this seems to work it was not fast enough to pass all tests.
