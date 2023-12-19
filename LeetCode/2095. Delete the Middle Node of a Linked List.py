@@ -37,3 +37,25 @@ class Solution:
         # reset node's next value to eliminate middle node
         curr_node.next = curr_node.next.next
         return head
+    
+# Solution #2:
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def deleteMiddle(self, head):
+        # if only one node, return None
+        if not head.next:
+            return None
+        # give fast a headstart so slow will land on one node before middle
+        slow = head
+        fast = head.next.next
+        # loop until fast reaches end of linked list
+        while (fast and fast.next):
+            slow = slow.next
+            fast = fast.next.next
+        # delete middle node
+        slow.next = slow.next.next
+        return head
