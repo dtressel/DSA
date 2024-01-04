@@ -30,8 +30,8 @@ The good substrings are "abc", "bca", "cab", and "abc".
 
 Constraints:
 
-1 <= s.length <= 100
-s​​​​​​ consists of lowercase English letters.
+- 1 <= s.length <= 100
+- s​​​​​​ consists of lowercase English letters.
 
 # Solution Explanation:
 
