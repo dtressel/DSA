@@ -30,11 +30,11 @@ Constraints:
 In order to solve this we first have to realize that what determines how much water can be trapped above a particular height[i] is the lower of the two max heights to its left and to its right.
 
 ## Approach
-To solve, we can use two pointers; left starting at the beginning and right starting at the end of the array. Max heights to the right of the right pointer and to the left of the left pointer are stored in separate variables and are initially set at the height of the first and last index.
+To solve, we can use two pointers: left starting at the beginning and right starting at the end of the array. Max heights to the right of the right pointer and to the left of the left pointer are stored in separate variables and are initially set at the height of the first and last index.
 
-For each iteration of the loop we can find the lower of the two max heights and use it to calculate the water that can be held at the corresponding pointer. If "max height left" is lower than "max height right", we will calculate how much water can be held at the left pointer. We are unaware of any heights in between the pointers, but that's okay since the limiting factor is the lower of the two max heights, and we know that the max height to the outside of the pointer chosen by the above method is lower than any potential max height to its other side.
+For each iteration of the loop we can find the lower of the two max heights and advance the corresponding pointer towards the middle. For example, if "max height left" is lower than "max height right", we will advance the left pointer. We now have enough information to calculate how much water can be held at that pointer. We are unaware of any heights in between the pointers, but that's okay since the limiting factor is the lower of the two max heights, and we know that the max height to the outside of the pointer chosen is lower than any potential max height to its other side.
 
-If the height at the pointer is lower than the max height to its outside, we can calculate how many units of water can be held above it (max height - height[i]). If the height at the pointer is higher than the max height to its outside then it can't store water, and we can update the value of the corresponding max height. We then move that pointer towards the middle and restart the loop.
+If the height at the pointer is lower than the corresponding max height, we calculate how many units of water can be held above it (max height - height[i]). If the height at the pointer is higher than the corresponding max height then it can't store water, and we can update the value of the corresponding max height.
 
 ## Complexity
 - Time complexity:

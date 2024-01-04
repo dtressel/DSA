@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {number}
  */
-var countGoodSubstrings = function(s) {
+const countGoodSubstrings = function(s) {
   let count = 0;
   let i = 0;
   while (s[i + 2]) {

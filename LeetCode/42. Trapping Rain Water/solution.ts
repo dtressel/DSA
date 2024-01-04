@@ -1,8 +1,4 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
-const trap = function(height) {
+function trap_ts(height: number[]): number {
   let left = 0;
   let right = height.length - 1;
   let maxHeightLeft = height[left];
